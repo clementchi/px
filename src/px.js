@@ -85,7 +85,7 @@
 
     function makePoint(item) {
         if (item && item.length >= 2) {
-            return {x: item[0], y: item[1]};
+            return [item[0], item[1]];
         }
         throw new Error('Invalid time series point format');
     }
