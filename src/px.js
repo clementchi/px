@@ -173,8 +173,8 @@
     };
 
     window.px.timeseries.dataTransformer.prototype.makeSeries = function(result) {
-        if (result.datapoints && result.datapoints.constructor === Array) {
-            var data = result.datapoints.map(makePoint);
+        if (result.values && result.values.constructor === Array) {
+            var data = result.values.map(makePoint);
             return {_groups: result.groups, data: data};
         }
         throw new Error('Invalid time series data format');
